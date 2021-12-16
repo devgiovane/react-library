@@ -1,0 +1,50 @@
+{
+    "name": "@fullcam/player",
+    "version": "1.0.0",
+    "description": "Player Component For React",
+    "author": "giovanesantossilva",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "scripts": {
+        "start": "webpack serve --progress",
+        "env": "cross-env NODE_ENV=production",
+        "clean": "rm -rf dist",
+        "babel": "babel src --out-dir dist --copy-files",
+        "build": "yarn clean && yarn env && yarn babel"
+    },
+    "repository": {
+        "url": "https://github.com/devgiovane/react-library"
+    },
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md"
+    ],
+    "keywords": [
+        "Player",
+        "Video"
+    ],
+    "peerDependencies": {
+        "react": "^17.0.0"
+    },
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.16.0",
+        "@babel/core": "^7.16.5",
+        "@babel/preset-env": "^7.16.5",
+        "@babel/preset-react": "^7.16.5",
+        "babel-loader": "^8.2.3",
+        "clean-webpack-plugin": "^4.0.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.5.1",
+        "html-webpack-plugin": "^5.5.0",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.65.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.6.0"
+    }
+}
