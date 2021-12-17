@@ -2,7 +2,7 @@
     "name": "@fullcam/player",
     "version": "1.0.0",
     "description": "Player Component For React",
-    "author": "giovanesantossilva",
+    "author": "Giovane Santos <giovanesantos1999@gmail.com>",
     "license": "ISC",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -14,6 +14,7 @@
         "build": "yarn clean && yarn env && yarn babel"
     },
     "repository": {
+        "type": "git",
         "url": "https://github.com/devgiovane/react-library"
     },
     "files": [
