@@ -1,8 +1,8 @@
 import './index.css';
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
-export const Player = ({ src, type, volume, view }) => {
+const Player = ({ src, type, volume, view }) => {
     const player = useRef();
 
     useEffect(() => {
@@ -16,3 +16,5 @@ export const Player = ({ src, type, volume, view }) => {
         </video>
     );
 }
+
+export default Player;
