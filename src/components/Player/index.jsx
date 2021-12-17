@@ -10,7 +10,7 @@ const Player = ({ src, type, volume, view }) => {
     }, []);
 
     return (
-        <video controls id="player" ref={player} style={{ objectFit: view }}>
+        <video controls id="player" role="player" ref={player} style={{ objectFit: view }}>
             <source src={src} type={type}/>
             <p>Your browser doesn't support HTML5 video. Here is a <a href={src}>link to the video</a> instead.</p>
         </video>
