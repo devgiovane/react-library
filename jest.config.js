@@ -13,6 +13,7 @@ module.exports = {
         "/node_modules/",
     ],
     moduleNameMapper: {
-        "\\.css$": "identity-obj-proxy",
+        "\\.(css|scss)$": "identity-obj-proxy",
+        "\\.(png|jpeg|jpg)$": "<rootDir>/test/mock.js"
     }
 };

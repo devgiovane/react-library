@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -22,6 +23,9 @@ const config = {
         extensions: [ ".js", ".jsx", ".json" ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            React: 'react'
+        }),
         new HtmlWebpackPlugin({
             inject: true,
             favicon: path.join(__dirname, "public", "favicon.ico"),
@@ -36,8 +40,7 @@ const config = {
                 use: {
                     loader: "babel-loader"
                 }
-            },
-            {
+            }, {
                 test: /.css$/i,
                 use: [
                     {
@@ -52,6 +55,11 @@ const config = {
                         }
                     }
                 ]
+            }, {
+                test: /.(woff|woff2|ttf|eot|svg|png|jpg)$/i,
+                use: {
+                    loader: 'file-loader'
+                }
             }
         ]
     }

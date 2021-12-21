@@ -1,9 +1,9 @@
 import { default as Player } from '.';
 import { cleanup, render, screen } from "@testing-library/react";
 
-afterEach(cleanup);
-
 describe('Player Component', function () {
+
+    afterEach(cleanup);
 
     it('should render component', function () {
         render(<Player volume={0} />);
