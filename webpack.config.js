@@ -1,6 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
 const config = {
     mode: "development",
@@ -11,7 +12,7 @@ const config = {
         path: path.resolve(__dirname, "build"),
         filename: "bundle.js",
         library: "default",
-        libraryTarget: "cjs"
+        libraryTarget: "umd"
     },
     devServer: {
         port: 9000,
@@ -23,7 +24,10 @@ const config = {
         extensions: [ ".js", ".jsx", ".json" ]
     },
     plugins: [
-        new webpack.ProvidePlugin({
+        new Dotenv({
+            safe: false
+        }),
+        new ProvidePlugin({
             React: 'react'
         }),
         new HtmlWebpackPlugin({

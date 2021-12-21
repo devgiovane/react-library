@@ -33,7 +33,6 @@ module.exports = {
         }),
         resolve({
             extensions,
-            jsnext: true,
             main: true,
             browser: true,
         }),

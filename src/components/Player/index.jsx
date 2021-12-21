@@ -2,11 +2,14 @@ import './index.css';
 
 import { useEffect, useRef } from "react";
 
+import { StorageService } from '../../service/storage';
+
 const Player = ({ src, type, volume, view }) => {
     const player = useRef();
 
     useEffect(() => {
         player.current.volume = volume;
+        StorageService.setObject(process.env.PLAYER_CONFIGS, {});
     }, []);
 
     return (
